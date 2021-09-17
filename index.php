@@ -1,33 +1,50 @@
 <?php
-  echo "salam"."<br>";
+$x = true;
 
-  $text = "Webprog.ir";
-  echo $text."<br>";
+echo $status = ($x) ? "true" : "false";
 
-  $x = "Web";
-  $y = 'Prog $x';
-  $z = "Prog $x";
-  echo $y."<br>";
-  echo $z."<br>";
+$colors = ["red","blue","white","green"];
 
-  $intExample = 6585632;
-  echo $intExample."<br>";
+foreach($colors as $color) {
+  echo $color."<br>";
+}
 
-  $floatExample = 6585.32;
-  echo $floatExample."<br>";
+// ***************************************
 
-  $cars1 = array("WebProg", 1, true, 2.55);
-  var_dump($cars1);
+function writeMsg1(){
+  echo "Hi To All";
   echo "<br>";
+}
+writeMsg1();
 
-  $cars2 = ["WebProg", 1, true, 2.55];
-  var_dump($cars2);
+function writeMsg2($text){
+  echo "My name is : ".$text;
   echo "<br>";
+}
+ 
+writeMsg2("mohammad");
 
-  $nulll = null;
-  var_dump($nulll);
+function addNumbers (int $num1, int $num2){
+  echo $num1 + $num2;
   echo "<br>";
+}
 
-  $converted = (float)16;
-  var_dump($converted);
+addNumbers(5,2);
+
+function setHeight($minHeight = 50) {
+  echo "The height is : " . $minHeight;
   echo "<br>";
+}
+
+setHeight();
+setHeight(100);
+
+function sum($x , $y){
+  return $x + $y;
+}
+
+echo sum(5, 10);
+
+
+// ***************************************
+
