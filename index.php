@@ -76,19 +76,36 @@
 
 // ***************************************
 
-$cookie_name = "user";
-$cookie_value = "Mamad Taheri";
+// $cookie_name = "user";
+// $cookie_value = "Mamad Taheri";
 
-setcookie($cookie_name, $cookie_value, time() + 3600);
+// setcookie($cookie_name, $cookie_value, time() + 3600);
 
-// echo time();
+// // echo time();
 
-echo "<br>";
+// echo "<br>";
 
-if(!isset($_COOKIE[$cookie_name])) {
-  echo "not set";
+// if(!isset($_COOKIE[$cookie_name])) {
+//   echo "not set";
+// } else {
+//   echo "is set";
+// }
+
+// setcookie($cookie_name, "", time() - 3600);
+
+// ***************************************
+
+session_start();
+
+$session_name = "user";
+$session_value = "Ali Sheikh";
+
+if (isset($_SESSION[$session_name])) {
+  echo "Session '" . $session_name . "' is set!<br>";
+  echo "Value is : " . $_SESSION[$session_name];
 } else {
-  echo "is set";
+  $_SESSION[$session_name] = $session_value;
+  echo "Session Started";
 }
 
-setcookie($cookie_name, "", time() - 3600);
+session_unset();
