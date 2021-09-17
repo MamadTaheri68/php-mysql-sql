@@ -1,50 +1,76 @@
 <?php
-$x = true;
+// $x = true;
 
-echo $status = ($x) ? "true" : "false";
+// echo $status = ($x) ? "true" : "false";
 
-$colors = ["red","blue","white","green"];
+// $colors = ["red","blue","white","green"];
 
-foreach($colors as $color) {
-  echo $color."<br>";
-}
+// foreach($colors as $color) {
+//   echo $color."<br>";
+// }
 
 // ***************************************
 
-function writeMsg1(){
-  echo "Hi To All";
-  echo "<br>";
-}
-writeMsg1();
+// function writeMsg1(){
+//   echo "Hi To All";
+//   echo "<br>";
+// }
+// writeMsg1();
 
-function writeMsg2($text){
-  echo "My name is : ".$text;
-  echo "<br>";
-}
+// function writeMsg2($text){
+//   echo "My name is : ".$text;
+//   echo "<br>";
+// }
  
-writeMsg2("mohammad");
+// writeMsg2("mohammad");
 
-function addNumbers (int $num1, int $num2){
-  echo $num1 + $num2;
-  echo "<br>";
-}
+// function addNumbers (int $num1, int $num2){
+//   echo $num1 + $num2;
+//   echo "<br>";
+// }
 
-addNumbers(5,2);
+// addNumbers(5,2);
 
-function setHeight($minHeight = 50) {
-  echo "The height is : " . $minHeight;
-  echo "<br>";
-}
+// function setHeight($minHeight = 50) {
+//   echo "The height is : " . $minHeight;
+//   echo "<br>";
+// }
 
-setHeight();
-setHeight(100);
+// setHeight();
+// setHeight(100);
 
-function sum($x , $y){
-  return $x + $y;
-}
+// function sum($x , $y){
+//   return $x + $y;
+// }
 
-echo sum(5, 10);
+// echo sum(5, 10);
+// echo "<br>";
 
-
+// echo "*******************************<br>";
 // ***************************************
+
+// define("SITE", "MamadTaheri.ir");
+// define("PI", 3.14596865222);
+
+// $radius = 10;
+// $area = $radius / 2 * PI;
+
+// echo $area;
+
+// $x = 10;
+
+// if($x === 5) {
+//   die("5");
+// } else {
+//   die("Not 5");
+// }
+
+$x = 5;
+$y = 10;
+
+unset($x);
+
+echo isset($x) ? "X exist" : "X not exist";
+echo "<br>";
+echo isset($y) ? "Y exist" : "Y not exist";
 
