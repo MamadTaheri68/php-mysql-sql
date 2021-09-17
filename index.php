@@ -1,111 +1,40 @@
-<?php
-// $x = true;
 
-// echo $status = ($x) ? "true" : "false";
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 
-// $colors = ["red","blue","white","green"];
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-// foreach($colors as $color) {
-//   echo $color."<br>";
-// }
+    <title>php-sandbox</title>
 
-// ***************************************
+    <style>
+        body {
+            text-align: right !important;
+        }
+    </style>
+</head>
 
-// function writeMsg1(){
-//   echo "Hi To All";
-//   echo "<br>";
-// }
-// writeMsg1();
+<body>
+    <div class="container-fluid bg-light">
 
-// function writeMsg2($text){
-//   echo "My name is : ".$text;
-//   echo "<br>";
-// }
- 
-// writeMsg2("mohammad");
+        <div class="row d-flex justify-content-center align-items-center" style="height: 100vh">
+            <div class="card">
+                <div class="card-body" style="width: 400px">
 
-// function addNumbers (int $num1, int $num2){
-//   echo $num1 + $num2;
-//   echo "<br>";
-// }
+                    <form action="process.php" method="get">
+                        <div class="form-group">
+                            <label for="name">نام</label>
+                            <input type="text" class="form-control" name="name" id="name">
+                        </div>
 
-// addNumbers(5,2);
+                        <button type="submit" class="btn btn-outline-primary btn-block">ارسال</button>
+                    </form>
 
-// function setHeight($minHeight = 50) {
-//   echo "The height is : " . $minHeight;
-//   echo "<br>";
-// }
-
-// setHeight();
-// setHeight(100);
-
-// function sum($x , $y){
-//   return $x + $y;
-// }
-
-// echo sum(5, 10);
-// echo "<br>";
-
-// echo "*******************************<br>";
-// ***************************************
-
-// define("SITE", "MamadTaheri.ir");
-// define("PI", 3.14596865222);
-
-// $radius = 10;
-// $area = $radius / 2 * PI;
-
-// echo $area;
-
-// $x = 10;
-
-// if($x === 5) {
-//   die("5");
-// } else {
-//   die("Not 5");
-// }
-
-// $x = 5;
-// $y = 10;
-
-// unset($x);
-
-// echo isset($x) ? "X exist" : "X not exist";
-// echo "<br>";
-// echo isset($y) ? "Y exist" : "Y not exist";
-
-// ***************************************
-
-// $cookie_name = "user";
-// $cookie_value = "Mamad Taheri";
-
-// setcookie($cookie_name, $cookie_value, time() + 3600);
-
-// // echo time();
-
-// echo "<br>";
-
-// if(!isset($_COOKIE[$cookie_name])) {
-//   echo "not set";
-// } else {
-//   echo "is set";
-// }
-
-// setcookie($cookie_name, "", time() - 3600);
-
-// ***************************************
-
-session_start();
-
-$session_name = "user";
-$session_value = "Ali Sheikh";
-
-if (isset($_SESSION[$session_name])) {
-  echo "Session '" . $session_name . "' is set!<br>";
-  echo "Value is : " . $_SESSION[$session_name];
-} else {
-  $_SESSION[$session_name] = $session_value;
-  echo "Session Started";
-}
-
-session_unset();
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
