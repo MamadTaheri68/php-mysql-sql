@@ -65,12 +65,30 @@
 //   die("Not 5");
 // }
 
-$x = 5;
-$y = 10;
+// $x = 5;
+// $y = 10;
 
-unset($x);
+// unset($x);
 
-echo isset($x) ? "X exist" : "X not exist";
+// echo isset($x) ? "X exist" : "X not exist";
+// echo "<br>";
+// echo isset($y) ? "Y exist" : "Y not exist";
+
+// ***************************************
+
+$cookie_name = "user";
+$cookie_value = "Mamad Taheri";
+
+setcookie($cookie_name, $cookie_value, time() + 3600);
+
+// echo time();
+
 echo "<br>";
-echo isset($y) ? "Y exist" : "Y not exist";
 
+if(!isset($_COOKIE[$cookie_name])) {
+  echo "not set";
+} else {
+  echo "is set";
+}
+
+setcookie($cookie_name, "", time() - 3600);
