@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
@@ -24,13 +23,69 @@
             <div class="card">
                 <div class="card-body" style="width: 400px">
 
-                    <form action="process.php" method="get">
-                        <div class="form-group">
-                            <label for="name">نام</label>
-                            <input type="text" class="form-control" name="name" id="name">
+                    <!-- checkbox & Radio -->
+                    <form action="process.php" method="post">
+            
+                        <div class="form-check">
+                            <input class="form-check-input" name="php" type="checkbox" id="checkbox1">
+                            <label class="form-check-label mr-3" for="checkbox1">
+                                PHP
+                            </label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" name="laravel" type="checkbox" value="Laravel" id="checkbox2">
+                            <label class="form-check-label mr-3" for="checkbox2">
+                                Laravel
+                            </label>
                         </div>
 
-                        <button type="submit" class="btn btn-outline-primary btn-block">ارسال</button>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Vue" id="radio1">
+                            <label class="form-check-label mr-3" for="radio1">
+                                Vue.js
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="React" value="React.js" id="radio2" >
+                            <label class="form-check-label mr-3" for="radio2">
+                                React.js
+                            </label>
+                        </div>
+
+                        <button type="submit" name="send" class="btn btn-outline-primary btn-block mt-4">ارسال</button>
+                    </form>
+
+                    <!-- Textarea -->
+                    <form action="process.php" method="post">
+
+                        <div class="form-group">
+                            <label for="exampleTextarea">Example textarea</label>
+                            <textarea class="form-control" name="textarea" value="area" id="exampleTextarea" rows="3">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            </textarea>
+                        </div>
+
+                        <button type="submit" name="send" class="btn btn-outline-primary btn-block mt-4">ارسال</button>
+                    </form>
+
+
+                    <!-- Select -->
+                    <form action="process.php" method="post">
+
+                        <div class="form-group">
+                            <label for="exampleSelect">Example multiple select</label>
+                            <select multiple class="form-control" name="select[]" id="exampleSelect">
+                                <option value="mamad">1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" name="send" class="btn btn-outline-primary btn-block mt-4">ارسال</button>
                     </form>
 
                 </div>

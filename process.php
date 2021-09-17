@@ -1,7 +1,9 @@
 <?php
 
-$name = $_GET['name'];
+if(isset($_POST['send'])){
 
-echo "Your Name is : $name";
+    var_dump($_POST);
+
+}
 
 ?>
